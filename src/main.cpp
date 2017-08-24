@@ -1,5 +1,5 @@
-#include <iostream>
+#include <hello/hello.h>
 
-int main() {
-	std::cout << "Hello, world!" << std::endl;
+std::ostream& hello::greet(std::ostream& stream) {
+	return stream << "Hello, world";
 }
