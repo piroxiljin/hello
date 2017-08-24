@@ -1,11 +1,11 @@
 dist: trusty
 language: cpp
 
+install:
+  - bash ./.travis/install.sh
+
 script:
-  - mkdir build && cd build
-  - cmake .. -DCMAKE_CXX_COMPILER=$CMAKE_CXX_COMPILER
-  - cmake --build .
-  - ./hello
+  - bash ./.travis/run.sh
 
 env:
   - BUILD_TYPE=Release COMPILER=g++-4.9
